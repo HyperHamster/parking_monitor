@@ -4,6 +4,8 @@ description = "Parking-lot-flavored monitor synchronization construct"
 version = "0.1.0"
 authors = ["HyperHamster <dwb5a9+q5yskv5oy2pdhr@sharklasers.com>"]
 
+edition = "2018"
+
 homepage = "https://github.com/HyperHamster/parking_monitor"
 repository = "https://github.com/HyperHamster/parking_monitor"
 
@@ -13,4 +15,4 @@ license-file = "LICENSE"
 keywords = ["monitor", "synchronization", "parking_lot"]
 
 [dependencies]
-parking_lot = "0.6.4"
+parking_lot = "0.7.1"

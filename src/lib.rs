@@ -1,5 +1,3 @@
-extern crate parking_lot;
-
 use parking_lot::{Condvar, Mutex, MutexGuard, RawMutex, WaitTimeoutResult};
 use std::{
     ops::{Deref, DerefMut},
@@ -97,12 +95,12 @@ impl<T> From<T> for Monitor<T> {
     }
 }
 
-pub struct MonitorGuard<'a, T: 'a> {
+pub struct MonitorGuard<'a, T> {
     cv: &'a Condvar,
     guard: MutexGuard<'a, T>,
 }
 
-impl<'a, T: 'a> MonitorGuard<'a, T> {
+impl<'a, T> MonitorGuard<'a, T> {
     pub fn new(cv: &'a Condvar, guard: MutexGuard<'a, T>) -> Self {
         MonitorGuard { cv, guard }
     }
@@ -128,7 +126,7 @@ impl<'a, T: 'a> MonitorGuard<'a, T> {
     }
 }
 
-impl<'a, T> Deref for MonitorGuard<'a, T> {
+impl<T> Deref for MonitorGuard<'_, T> {
     type Target = T;
 
     fn deref(&self) -> &Self::Target {
@@ -136,7 +134,7 @@ impl<'a, T> Deref for MonitorGuard<'a, T> {
     }
 }
 
-impl<'a, T> DerefMut for MonitorGuard<'a, T> {
+impl<T> DerefMut for MonitorGuard<'_, T> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         self.guard.deref_mut()
     }
