@@ -2,7 +2,7 @@
 name = "parking_monitor"
 version = "0.1.1"
 authors = ["Hyper <9900991+HyperHamster@users.noreply.github.com>"]
-edition = "2018"
+edition = "2021"
 description = "Parking-lot-flavored monitor synchronization construct"
 license = "MIT"
 repository = "https://github.com/HyperHamster/parking_monitor"
