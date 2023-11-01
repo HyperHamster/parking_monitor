@@ -1,7 +1,7 @@
 [package]
 name = "parking_monitor"
-version = "0.1.0"
-authors = ["HyperHamster <dwb5a9+q5yskv5oy2pdhr@sharklasers.com>"]
+version = "0.1.1"
+authors = ["Hyper <9900991+HyperHamster@users.noreply.github.com>"]
 edition = "2018"
 description = "Parking-lot-flavored monitor synchronization construct"
 license = "MIT"
@@ -11,4 +11,4 @@ keywords = ["monitor", "synchronization", "parking_lot"]
 categories = ["concurrency"]
 
 [dependencies]
-parking_lot = "0.7.1"
+parking_lot = "0.12.1"
