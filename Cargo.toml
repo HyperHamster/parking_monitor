@@ -9,6 +9,7 @@ repository = "https://github.com/HyperHamster/parking_monitor"
 readme = "README.md"
 keywords = ["monitor", "synchronization", "parking_lot"]
 categories = ["concurrency"]
+license-file = "LICENSE.txt"
 
 [dependencies]
 parking_lot = "0.12.1"
